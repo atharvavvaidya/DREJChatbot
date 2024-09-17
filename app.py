@@ -113,7 +113,7 @@ def handle_user_query(user_question, pdf_text=None):
 st.set_page_config(page_title="Q&A Demo with PDF Reader")
 st.header("DREJ: The Chat Bot")
 
-# Apply custom CSS for the sidebar
+# Apply custom CSS for the sidebar and to hide the full screen button
 st.markdown(
     """
     <style>
@@ -121,6 +121,10 @@ st.markdown(
     [data-testid="stSidebar"] {
         background-image: linear-gradient(#122D5C,#122D5C);  /* Gradient background */
         color: white;  /* White text color */
+    }
+    /* Hide the full screen button */
+    button[title="View fullscreen"] {
+        display: none;
     }
     </style>
     """,
